@@ -126,7 +126,7 @@ func (c *Cell) SetDateTime(t time.Time) {
 	c.SetDateTimeWithFormat(timeToExcelTime(timeToUTCTime(t)), builtInNumFmt[14])
 }
 
-func (c *Cell) SetDateTimeWithCustomeFormat(t time.Time, format string) {
+func (c *Cell) SetDateTimeWithCustomFormat(t time.Time, format string) {
 	c.SetDateTimeWithFormat(timeToExcelTime(timeToUTCTime(t)), format)
 }
 
