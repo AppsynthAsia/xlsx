@@ -126,6 +126,10 @@ func (c *Cell) SetDateTime(t time.Time) {
 	c.SetDateTimeWithFormat(timeToExcelTime(timeToUTCTime(t)), builtInNumFmt[14])
 }
 
+func (c *Cell) SetDateTimeWithCustomeFormat(t time.Time, format string) {
+	c.SetDateTimeWithFormat(timeToExcelTime(timeToUTCTime(t)), format)
+}
+
 func (c *Cell) SetDateTimeWithFormat(n float64, format string) {
 	c.Value = strconv.FormatFloat(n, 'f', -1, 64)
 	c.NumFmt = format
